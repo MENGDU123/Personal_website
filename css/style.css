@@ -1,0 +1,33 @@
+a:link {
+			color:grey;
+			text-decoration:none;
+		}
+		a:visited {
+			color:grey;
+			text-decoration:none;
+		}
+		a:hover {
+			color:aqua;
+			text-decoration:none;
+		}
+
+h1{
+    font: 48px ;
+    margin:50px auto;
+	font-weight: 100;
+	background:-webkit-linear-gradient(top, #DCDCDC, #A9A9A9);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation:bounce 2s infinite;
+		}
+@-webkit-keyframes bounce{
+	0%,100%,20%,50%,80%{
+	-webkit-transform:translateY(0);
+	    }
+	40%{
+	    -webkit-transform:translateY(-30px);
+		}
+	60%{
+	    -webkit-transform:translateY(-15px);
+		}
+	}

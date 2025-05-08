@@ -1,24 +1,14 @@
-function getFileList(directory) {
-    var fileList = [];
+        async function loadTxtFile() {
 
-    // 获取目录下的所有文件/目录
-    var files = File(directory).ls();
 
-    // 遍历文件列表
-    for (var i = 0; i < files.length; i++) {
-        var file = files[i];
+            const response = await fetch('example.txt');
 
-        // 判断文件类型，如果是目录则递归获取子目录的文件列表
-        if (file.isFolder()) {
-            var subDirectory = directory + '/' + file.name;
-            var subFiles = getFileList(subDirectory);
-            fileList = fileList.concat(subFiles);
-        } else {
-            fileList.push(file);
+
+            const text = await response.text();
+
+
+            document.getElementById('content').innerText = text;
+
+
         }
-    }
-
-    return fileList;
-}
-//猫猫不会js，这段是直接复制的。
-//js目前没有使用到。
+//我也许使用了一个很蠢的方式，通过Python读取CPU内存，然后写入txt，再通过js读出来，输出到网页上。
